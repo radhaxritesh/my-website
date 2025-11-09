@@ -1,127 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B.Tech Data Science And AI & ML Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website - Ritesh Singh</title>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Poppins", sans-serif;
       background-color: #0a1a2f;
-      color: #fff;
-    }
-
-    /* Navbar */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background: rgba(10, 26, 47, 0.9);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      flex-wrap: wrap;
-    }
-    nav h1 {
-      color: #00c3ff;
-      font-size: 22px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0;
-      margin: 10px 0 0 0;
-    }
-    nav ul li a {
       color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    nav ul li a:hover {
-      color: #00c3ff;
-    }
-
-    /* Glow effect for main headings */
-    section h2 {
-      color: #00c3ff;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 50px;
-      min-height: 100vh;
-      gap: 40px;
-      flex-wrap: wrap;
       text-align: center;
+      scroll-behavior: smooth;
     }
 
-    .hero-text {
-      max-width: 500px;
-    }
-    .hero-text h2 {
+    header {
+      background: linear-gradient(90deg, #00c3ff, #0066ff);
+      padding: 15px 0;
       font-size: 24px;
-      color: #ccc;
-    }
-    .hero-text h1 {
-      font-size: 40px;
-      color: #00c3ff;
-      text-shadow: 0 0 15px #00c3ff, 0 0 30px #00c3ff;
-    }
-    .hero-text p {
-      margin: 15px 0;
-      line-height: 1.6;
-      color: #aaa;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: none;
-      background: #00c3ff;
-      color: #0a1a2f;
       font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #00a5d1;
+      letter-spacing: 1px;
     }
 
-    /* Profile Image */
-    .hero-img {
-      position: relative;
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid #00c3ff;
-      box-shadow: 0 0 40px #00c3ff;
-    }
-    .hero-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Common Section Style */
     section {
-      text-align: center;
+      padding: 20px 20px;
     }
 
-    /* GET Button */
+    h2 {
+      color: #00c3ff;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
     .get-btn {
       display: inline-block;
       margin-top: 10px;
@@ -135,133 +55,79 @@
       box-shadow: 0 0 15px #00c3ff;
       transition: 0.3s ease;
     }
+
     .get-btn:hover {
       background: #00a5d1;
       transform: scale(1.05);
       box-shadow: 0 0 25px #00c3ff, 0 0 35px #00c3ff;
     }
 
-    /* Footer */
     footer {
-      margin-top: 40px;
-      background: #08121f;
-      padding: 20px;
-      text-align: center;
-    }
-    .contact-icons {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 15px;
-      align-items: center;
-    }
-    .contact-icons a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
-      text-decoration: none;
+      background: #001324;
+      padding: 10px;
+      color: #aaa;
       font-size: 14px;
     }
-    .contact-icons img {
-      width: 35px;
-      height: 35px;
-      filter: brightness(0) invert(1);
-      transition: 0.3s;
-      margin-bottom: 5px;
-    }
-    .contact-icons img:hover {
-      filter: brightness(0) invert(1) drop-shadow(0 0 5px #00c3ff);
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero-text h1 {
-        font-size: 28px;
-      }
-      .hero-text h2 {
-        font-size: 18px;
-      }
-      .get-btn {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
-    }
   </style>
-
-  <!-- AOS Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body>
-  <!-- Navbar -->
-  <nav>
-    <h1>B.Tech Data Science And Ai&Ml</h1>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#syllabus">Syllabus</a></li>
-      <li><a href="#timetable">Timetable</a></li>
-      <li><a href="#notes">Notes</a></li>
-      <li><a href="#lab">Lab</a></li>
-      <li><a href="#groups">Groups</a></li>
-      <li><a href="#suggestion">Suggestion</a></li>
-    </ul>
-  </nav>
 
-  <!-- Hero -->
-  <section id="home" class="hero" data-aos="fade-up">
-    <div class="hero-text">
-      <h2>Hello, I'm</h2>
-      <h1>Ritesh Singh</h1>
-      <h2>And I'm a B.Tech Data Science Student</h2>
-      <p>
-        Welcome to my branch portal! Here you can find syllabus, timetable, notes,
-        labs, and student groups — all in one place.
-      </p>
-      <a href="https://wa.me/9327802170" target="_blank" class="btn">Join WhatsApp</a>
-    </div>
-    <div class="hero-img" data-aos="zoom-in">
-      <img src="https://via.placeholder.com/280" alt="Profile Picture">
-    </div>
+<body>
+  <header>Welcome to My Website</header>
+
+  <!-- ✅ Home Section -->
+  <section id="home" data-aos="fade-up">
+    <h2>Home</h2>
+    <p>Welcome to my official website! Explore syllabus, timetable, and notes below.</p>
   </section>
 
-  <!-- Compact Syllabus + Timetable + Notes Section -->
-  <section id="syllabus" data-aos="fade-left" style="padding:60px 20px 20px 20px;">
+  <!-- ✅ Syllabus Section -->
+  <section id="syllabus" data-aos="fade-left">
     <h2>Syllabus</h2>
     <p>Click below to view the complete syllabus folder.</p>
     <a href="https://drive.google.com/drive/folders/1V3hfH5Fzr5ZWu_P1v0pdDmXENe7ca8Oq" target="_blank" class="get-btn">📘 Get Syllabus</a>
   </section>
 
-  <section id="timetable" data-aos="fade-left" style="padding:20px 20px;">
+  <!-- ✅ Timetable Section -->
+  <section id="timetable" data-aos="fade-left">
     <h2>Timetable</h2>
     <p>Click below to view the latest timetable.</p>
     <a href="https://drive.google.com/drive/folders/YOUR_TIMETABLE_FOLDER_ID" target="_blank" class="get-btn">🗓️ Get Timetable</a>
   </section>
 
-  <section id="notes" data-aos="fade-left" style="padding:20px 20px 60px 20px;">
+  <!-- ✅ Notes Section -->
+  <section id="notes" data-aos="fade-left">
     <h2>Notes</h2>
     <p>Click below to access all uploaded notes.</p>
     <a href="https://drive.google.com/drive/folders/YOUR_NOTES_FOLDER_ID" target="_blank" class="get-btn">📒 Get Notes</a>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="contact-icons">
-      <a href="https://wa.me/9327802170" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">WhatsApp
-      </a>
-      <a href="tel:+919327802170">
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone">Phone
-      </a>
-      <a href="mailto:riteshrajput8574@gmail.com">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">Email
-      </a>
-    </div>
-    <p>© 2025-26 Ritesh Singh | All Rights Reserved</p>
-  </footer>
+  <!-- ✅ Labs Section -->
+  <section id="lab" data-aos="fade-left">
+    <h2>Lab Works</h2>
+    <p>All your lab files and practicals are available here.</p>
+    <a href="#" class="get-btn">🔬 View Labs</a>
+  </section>
+
+  <!-- ✅ Groups Section -->
+  <section id="groups" data-aos="fade-left">
+    <h2>Groups</h2>
+    <p>Connect with classmates and study groups.</p>
+    <a href="#" class="get-btn">👥 Join Group</a>
+  </section>
+
+  <!-- ✅ Suggestion Section -->
+  <section id="suggestions" data-aos="fade-left">
+    <h2>Suggestions</h2>
+    <p>Have feedback or ideas? Click below to share.</p>
+    <a href="#" class="get-btn">💬 Give Suggestion</a>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>© 2025 Ritesh Singh | All Rights Reserved</footer>
 
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init();
   </script>
 </body>
 </html>
+
