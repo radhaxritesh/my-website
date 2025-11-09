@@ -47,6 +47,7 @@
       color: #00c3ff;
     }
 
+    /* Glow effect for main headings */
     section h2 {
       color: #00c3ff;
       margin-bottom: 20px;
@@ -85,7 +86,7 @@
 
     .btn {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 20px;
       padding: 10px 20px;
       border: none;
       background: #00c3ff;
@@ -97,9 +98,9 @@
     }
     .btn:hover {
       background: #00a5d1;
-      box-shadow: 0 0 15px #00c3ff;
     }
 
+    /* Profile Image Glow */
     .hero-img {
       position: relative;
       width: 250px;
@@ -115,6 +116,7 @@
       object-fit: cover;
     }
 
+    /* College Image Section */
     .college-img {
       margin-top: 60px;
       text-align: center;
@@ -127,10 +129,31 @@
       box-shadow: 0 0 30px #00c3ff;
     }
 
+    /* Common Section Style */
     section {
       padding: 80px 20px;
       text-align: center;
       min-height: 60vh;
+    }
+
+    /* Get Buttons */
+    .get-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #00c3ff;
+      color: #0a1a2f;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      box-shadow: 0 0 15px #00c3ff;
+      transition: 0.3s ease;
+    }
+    .get-btn:hover {
+      background: #00a5d1;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00c3ff, 0 0 35px #00c3ff;
     }
 
     /* Suggestion Box */
@@ -143,7 +166,14 @@
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0, 195, 255, 0.5);
     }
+    .suggestion iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+    }
 
+    /* Footer */
     footer {
       margin-top: 40px;
       background: #08121f;
@@ -153,6 +183,7 @@
     .contact-icons {
       display: flex;
       justify-content: center;
+      flex-wrap: nowrap;
       gap: 30px;
       margin-bottom: 15px;
       align-items: center;
@@ -161,6 +192,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
       color: white;
       text-decoration: none;
       font-size: 14px;
@@ -170,27 +202,61 @@
       height: 35px;
       filter: brightness(0) invert(1);
       transition: 0.3s;
+      display: block;
       margin-bottom: 5px;
+    }
+    .contact-icons img:hover {
+      filter: brightness(0) invert(1) drop-shadow(0 0 5px #00c3ff);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+      }
+      .hero-img {
+        width: 200px;
+        height: 200px;
+      }
+      .college-img img {
+        width: 95%;
+      }
     }
 
     @media (max-width: 600px) {
-      .contact-icons {
-        gap: 15px;
+      nav {
+        padding: 15px 20px;
+        text-align: center;
       }
-      .contact-icons a {
-        font-size: 12px;
+      nav h1 {
+        font-size: 18px;
+        width: 100%;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .hero-text h1 {
+        font-size: 28px;
+      }
+      .hero-text h2 {
+        font-size: 18px;
+      }
+      .hero-text p {
+        font-size: 14px;
       }
     }
   </style>
 
-  <!-- AOS -->
+  <!-- AOS Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
   <!-- Navbar -->
   <nav>
-    <h1>B.Tech Data Science And AI & ML</h1>
+    <h1>B.Tech Data Science And Ai&Ml</h1>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#syllabus">Syllabus</a></li>
@@ -202,103 +268,142 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section id="home" class="hero" data-aos="fade-up">
     <div class="hero-text">
       <h2>Hello, I'm</h2>
       <h1>Ritesh Singh</h1>
       <h2>And I'm a B.Tech Data Science Student</h2>
       <p>
-        Welcome to my branch portal! Here you can find syllabus, class timetable, notes, 
-        labs, student groups and more — all in one place.
+        Welcome to my branch portal! Here you can find syllabus, class timetable, daily notes, 
+        lab details, student groups, and a way to connect with our WhatsApp channel. 
+        Stay updated with all resources in one place!
       </p>
       <a href="https://wa.me/9327802170" target="_blank" class="btn">Join WhatsApp</a>
     </div>
+
     <div class="hero-img" data-aos="zoom-in">
       <img src="https://via.placeholder.com/280" alt="Profile Picture">
     </div>
   </section>
 
-  <!-- College -->
+  <!-- College Image -->
   <div class="college-img" data-aos="fade-right">
     <h2>My College</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Government_Engineering_College_Bharuch.jpg/640px-Government_Engineering_College_Bharuch.jpg" alt="College Image">
+    <img src="https://via.placeholder.com/700x400" alt="College Image">
   </div>
 
   <!-- Syllabus -->
   <section id="syllabus" data-aos="fade-left">
     <h2>Syllabus</h2>
-    <iframe src="https://drive.google.com/drive/folders/1V3hfH5Fzr5ZWu_P1v0pdDmXENe7ca8Oq" 
-      style="width:90%; height:500px; border:none; border-radius:10px; box-shadow:0 0 15px #00c3ff;">
-    </iframe>
+    <p>Click below to view the complete syllabus folder.</p>
+    <a href="https://drive.google.com/drive/folders/1V3hfH5Fzr5ZWu_P1v0pdDmXENe7ca8Oq" target="_blank" class="get-btn">📘 Get Syllabus</a>
   </section>
 
   <!-- Timetable -->
   <section id="timetable" data-aos="fade-right">
     <h2>Timetable</h2>
-    <p>Your class timetable will appear here.</p>
+    <p>Click below to view the latest timetable.</p>
+    <a href="https://drive.google.com/drive/folders/YOUR_TIMETABLE_FOLDER_ID" target="_blank" class="get-btn">🗓️ Get Timetable</a>
   </section>
 
   <!-- Notes -->
   <section id="notes" data-aos="fade-up">
     <h2>Notes</h2>
-    <iframe src="https://drive.google.com/embeddedfolderview?id=YOUR_NOTES_FOLDER_ID#list" 
-      style="width:90%; height:500px; border:none; border-radius:10px; box-shadow:0 0 15px #00c3ff;">
-    </iframe>
+    <p>Click below to access all uploaded notes.</p>
+    <a href="https://drive.google.com/drive/folders/YOUR_NOTES_FOLDER_ID" target="_blank" class="get-btn">📒 Get Notes</a>
   </section>
 
-  <!-- Lab -->
-  <section id="lab" data-aos="zoom-in" style="text-align:center;">
+  <!-- Lab Section -->
+  <section id="lab" data-aos="zoom-in" style="text-align:center; padding:40px 20px;">
     <h2>Lab</h2>
-    <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+    <p>Lab details and schedules.</p>
 
-      <!-- Chemistry Lab -->
-      <div style="border:1px solid #ccc; padding:15px; border-radius:10px; width:250px;">
+    <div class="labs" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+      <div class="lab-item" style="border:1px solid #ccc; padding:15px; border-radius:10px; width:250px;">
         <h3>Chemistry Lab</h3>
         <p>Virtual Chemistry experiments and simulations.</p>
-        <a href="https://pcv-amrt.vlabs.ac.in/Introduction.html" target="_blank" class="btn">Visit</a>
+        <a href="https://pcv-amrt.vlabs.ac.in/Introduction.html" target="_blank" class="lab-btn">Visit Lab</a>
       </div>
 
-      <!-- Basic Electronics Lab -->
-      <div style="border:1px solid #ccc; padding:15px; border-radius:10px; width:250px;">
+      <div class="lab-item" style="border:1px solid #ccc; padding:15px; border-radius:10px; width:250px;">
         <h3>Basic Electronics Lab</h3>
         <p>Experiments on circuits and electronics.</p>
-        <a href="https://be-iitkgp.vlabs.ac.in/" target="_blank" class="btn">Visit</a>
+        <a href="https://be-iitkgp.vlabs.ac.in/" target="_blank" class="lab-btn">Visit Lab</a>
       </div>
 
-      <!-- Physics Lab -->
-      <div style="border:1px solid #ccc; padding:15px; border-radius:10px; width:250px;">
+      <div class="lab-item" style="border:1px solid #ccc; padding:15px; border-radius:10px; width:250px;">
         <h3>Physics Lab</h3>
         <p>Experiments on mechanics, optics, and electronics.</p>
-        <a href="https://bop-iitk.vlabs.ac.in/" target="_blank" class="btn">Visit</a>
+        <a href="https://bop-iitk.vlabs.ac.in/" target="_blank" class="lab-btn">Visit Lab</a>
       </div>
-
     </div>
   </section>
+
+  <!-- Lab Button Style -->
+  <style>
+    .lab-btn {
+      display:inline-block;
+      padding:8px 15px;
+      border-radius:5px;
+      background-color:blue;
+      color:white;
+      text-decoration:none;
+      box-shadow:0 0 10px blue;
+      transition:0.3s;
+    }
+    .lab-btn:hover {
+      box-shadow:0 0 20px #00f, 0 0 30px #00f;
+      transform:scale(1.05);
+    }
+  </style>
 
   <!-- Groups -->
   <section id="groups" data-aos="fade-down">
     <h2>Groups</h2>
-    <p>Join our WhatsApp groups for updates.</p>
-    <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
-      <a href="https://chat.whatsapp.com/GroupLink1" target="_blank" class="btn">Group 1</a>
-      <a href="https://chat.whatsapp.com/GroupLink2" target="_blank" class="btn">Group 2</a>
-      <a href="https://chat.whatsapp.com/GroupLink3" target="_blank" class="btn">Group 3</a>
-      <a href="https://chat.whatsapp.com/GroupLink4" target="_blank" class="btn">Group 4</a>
+    <p>Join our WhatsApp groups for discussions and updates.</p>
+    <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+      <a href="https://chat.whatsapp.com/GroupLink1" target="_blank" class="group-btn">Group 1</a>
+      <a href="https://chat.whatsapp.com/GroupLink2" target="_blank" class="group-btn">Group 2</a>
+      <a href="https://chat.whatsapp.com/GroupLink3" target="_blank" class="group-btn">Group 3</a>
+      <a href="https://chat.whatsapp.com/GroupLink4" target="_blank" class="group-btn">Group 4</a>
     </div>
   </section>
+
+  <!-- Group Button Style -->
+  <style>
+    .group-btn {
+      display:inline-block;
+      padding:10px 20px;
+      margin:5px;
+      border-radius:5px;
+      background-color:#00c3ff;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 0 8px #00c3ff;
+      transition:0.3s;
+    }
+    .group-btn:hover {
+      box-shadow:0 0 15px #00c3ff, 0 0 25px #00c3ff;
+      transform:scale(1.05);
+    }
+  </style>
 
   <!-- Suggestion -->
   <section id="suggestion" data-aos="fade-up">
     <h2>Suggestion Box</h2>
     <div class="suggestion">
       <form action="https://formspree.io/f/mnngaade" method="POST">
-        <label>Name:</label><br>
-        <input type="text" name="name" placeholder="Your Name" required><br><br>
-        <label>Email:</label><br>
-        <input type="email" name="email" placeholder="Your Email" required><br><br>
-        <label>Your Suggestion:</label><br>
-        <textarea name="message" rows="4" placeholder="Type your suggestion here..." required></textarea><br><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+        <label for="message">Your Suggestion:</label><br>
+        <textarea id="message" name="message" rows="4" placeholder="Type your suggestion here..." required></textarea><br><br>
+
         <button type="submit" style="padding:10px 20px; background-color:green; color:white; border:none; cursor:pointer;">
           Send
         </button>
@@ -307,10 +412,10 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer data-aos="fade-up">
     <div class="contact-icons">
       <a href="https://wa.me/9327802170" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:40px;">
         WhatsApp
       </a>
       <a href="tel:+919327802170">
@@ -325,9 +430,14 @@
     <p>© 2025-26 Ritesh Singh | All Rights Reserved</p>
   </footer>
 
+  <!-- AOS Init -->
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
   </script>
 </body>
 </html>
+
 
