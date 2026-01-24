@@ -205,12 +205,17 @@
       font-size: 14px;
     }
     .contact-icons img {
-      width: 35px;
-      height: 35px;
-      filter: brightness(0) invert(1);
-      transition: 0.3s;
-      margin-bottom: 5px;
-    }
+  width: 35px;
+  height: 35px;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+/* hover pe thoda glow */
+.contact-icons img:hover {
+  filter: drop-shadow(0 0 6px #00c3ff);
+  transform: scale(1.1);
+}
     
     /* Responsive */
     @media (max-width: 1024px) {
