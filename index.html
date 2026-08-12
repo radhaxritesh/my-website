@@ -431,6 +431,48 @@
   <script>
     AOS.init({ duration: 1000, once: true });
   </script>
+
+  <script>
+let collegeSlideIndex = 0;
+
+function showCollegeSlide(index) {
+    const slides = document.querySelector('.college-slides');
+    const totalSlides = document.querySelectorAll('.college-slides img').length;
+
+    if (index >= totalSlides) {
+        collegeSlideIndex = 0;
+    } else if (index < 0) {
+        collegeSlideIndex = totalSlides - 1;
+    } else {
+        collegeSlideIndex = index;
+    }
+
+    slides.style.transform =
+        `translateX(-${collegeSlideIndex * 100}%)`;
+
+    const dots = document.querySelectorAll('.college-dots span');
+
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    if (dots[collegeSlideIndex]) {
+        dots[collegeSlideIndex].classList.add('active');
+    }
+}
+
+function moveCollegeSlide(direction) {
+    showCollegeSlide(collegeSlideIndex + direction);
+}
+
+// Start slider
+showCollegeSlide(0);
+
+// Auto slide every 3 seconds
+setInterval(function() {
+    moveCollegeSlide(1);
+}, 3000);
+</script>
+
+  
 </body>
 </html>
 
