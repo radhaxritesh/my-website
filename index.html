@@ -271,11 +271,29 @@
     </div>
   </section>
 
-  <!-- College Image -->
-  <div class="college-img" data-aos="fade-right">
-    <h2>My College</h2>
-    <img src="College Image.png" alt="College Image">
+  <!-- College Image Slider -->
+<div class="college-img" data-aos="fade-right">
+  <h2>My College</h2>
+
+  <div class="college-slider">
+    <div class="college-slides">
+      <img src="College Image.png" alt="College Image">
+      <img src="College Image 2.png" alt="College Image 2">
+      <img src="College Image 3.png" alt="College Image 3">
+      <img src="College Image 4.png" alt="College Image 4">
+    </div>
+
+    <button class="slider-btn prev" onclick="moveCollegeSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="moveCollegeSlide(1)">❯</button>
   </div>
+
+  <div class="college-dots">
+    <span onclick="showCollegeSlide(0)"></span>
+    <span onclick="showCollegeSlide(1)"></span>
+    <span onclick="showCollegeSlide(2)"></span>
+    <span onclick="showCollegeSlide(3)"></span>
+  </div>
+</div>
 
   <!-- Syllabus -->
   <section id="syllabus" data-aos="fade-left">
